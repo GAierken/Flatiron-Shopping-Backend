@@ -1,0 +1,2 @@
+class JointablesController < ApplicationController
+end
