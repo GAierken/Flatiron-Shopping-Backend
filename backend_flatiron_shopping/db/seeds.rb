@@ -1,10 +1,10 @@
 
 puts "Destroying seeds"
 
-Item.destroy_all
 Jointable.destroy_all
-Order.destroy_all
 User.destroy_all
+Item.destroy_all
+Order.destroy_all
 
 
 puts "Making new users"
