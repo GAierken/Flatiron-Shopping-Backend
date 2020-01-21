@@ -213,7 +213,7 @@ o4 = Order.create(user_id:2)
 
 puts 'Making joins'
 
-Jointable.create(order_id:1, item_id:1)
+Jointable.create(order_id:1, item_id:1) 
 Jointable.create(order_id:1, item_id:2)
 Jointable.create(order_id:3, item_id:3)
 Jointable.create(order_id:3, item_id:4)

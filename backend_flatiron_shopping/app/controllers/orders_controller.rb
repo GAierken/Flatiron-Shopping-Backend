@@ -8,4 +8,9 @@ class OrdersController < ApplicationController
         order = Order.find(params[:id])
         render json:order 
     end 
+
+    def create 
+        byebug
+
+    end 
 end

@@ -10,14 +10,16 @@ class UsersController < ApplicationController
     end 
 
     def create
-        user=User.new(user_params)
-        if user
-            user.save
+        
+        user=User.create(user_params)
+        byebug
+        if user.valid?
+            render json: user
         else 
-            flash[:errors] = user.error.messages
+            render json:{errors: user.errors.full_messages}, status: :unprocessable_entity
         end 
-
-        render json: user
+        
+        
     end 
 
     def update
