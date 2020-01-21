@@ -1,4 +1,3 @@
 class Item < ApplicationRecord
-    has_many :jointables
-    has_many :orders, through: :jointables
+     has_many :jointables
 end

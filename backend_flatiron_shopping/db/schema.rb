@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_17_191121) do
+ActiveRecord::Schema.define(version: 2020_01_21_145836) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "items", force: :cascade do |t|
     t.string "name"
-    t.integer "price"
+    t.float "price"
     t.string "image"
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 2020_01_17_191121) do
   end
 
   create_table "jointables", force: :cascade do |t|
-    t.bigint "order_id", null: false
     t.bigint "item_id", null: false
+    t.bigint "order_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["item_id"], name: "index_jointables_on_item_id"
