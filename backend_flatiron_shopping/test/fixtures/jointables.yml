@@ -1,9 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  order: one
   item: one
+  order: one
 
 two:
-  order: two
   item: two
+  order: two

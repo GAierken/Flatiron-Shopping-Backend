@@ -1,14 +1,14 @@
 class UsersController < ApplicationController
     def index
         users = User.all 
-        render json: users
+        render json:users
     end 
-    
+
     def show
         user = User.find(params[:id])
-        render json: user
+        render json:user
     end 
-    
+
     def create
         user=User.new(user_params)
         if user
@@ -38,4 +38,6 @@ class UsersController < ApplicationController
     def user_params
         params.require(:user).permit(:username, :password_digest, :email)
     end 
+
+    
 end
