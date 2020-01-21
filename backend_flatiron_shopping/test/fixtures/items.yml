@@ -5,9 +5,11 @@ one:
   price: 1.5
   image: MyString
   description: MyString
+  type: 
 
 two:
   name: MyString
   price: 1.5
   image: MyString
   description: MyString
+  type: 

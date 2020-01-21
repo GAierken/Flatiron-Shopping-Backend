@@ -33,7 +33,8 @@ items=[{
     Natural wide shape nipple, ultra soft/n
     Airflex vent technology/n
     Multiple bottle and nipple sizes/n
-    BPA-Free'
+    BPA-Free',
+    category: "feeding"
 },
 {
     name: 'Nuk Simply Natural Bottle 9oz',
@@ -42,14 +43,16 @@ items=[{
     description: "Multiple nipple holes and innovative, extra-soft nipple provide a natural feed—it feels just like mom’s breast/n
     9 oz bottle comes with medium-flow nipple that has 6 holes to provide baby's most comfortable feed/n
     Advanced 1-Piece Anti-Colic Air system helps reduce colic, gas, and spit up for greater comfort and fewer messes/n
-    Flexible nipple allows for a continuous latch and is the same shape as mom’s nursing nipple during breastfeeding"
+    Flexible nipple allows for a continuous latch and is the same shape as mom’s nursing nipple during breastfeeding",
+    category: "feeding"
 },
 {
     name: 'MAM Anti-Colic Bottle, 9oz, 1ct',
     price: 4,
     image: 'http://www.leslouves.com/wp-content/uploads/2019/02/biberon-anticolique-mam-DR.jpg',
     description: "GREAT FOR BREASTFEEDING MOMS: SkinSoft nipple mimics breastfeeding, making the MAM Anti-Colic Bottle the best bottle for a breastfed baby. Switching between breastfeeding and bottle feeding is simple and easy with MAM Anti-Colic Baby Bottles./n
-    REDUCES COLIC, GAS AND REFLUX: Advanced anti-colic venting system creates a vacuum effect to eliminate bubbles that cause gas and aggravate colic and reflux symptoms."
+    REDUCES COLIC, GAS AND REFLUX: Advanced anti-colic venting system creates a vacuum effect to eliminate bubbles that cause gas and aggravate colic and reflux symptoms.",
+    category: "feeding"
 },
 {
     name: 'Comotomo Silicone Bottle 5oz (2pk)',
@@ -59,7 +62,8 @@ items=[{
     Scratch-resistant, bacteria-resistant, shatterproof and leak-proof/n
     Package quantity: 2/n
     Features: Wide neck bottles, nipple vent, vacuum-free feeding, vent valve/n
-    Safety & security: Nitrosamine-free, BPA-free"
+    Safety & security: Nitrosamine-free, BPA-free",
+    category: "feeding"
 }]
 
 Item.create(items)
