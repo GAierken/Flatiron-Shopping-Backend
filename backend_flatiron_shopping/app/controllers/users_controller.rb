@@ -14,7 +14,7 @@ class UsersController < ApplicationController
         if user
             user.save
         else 
-            flash[:notice] = user.error.messages
+            flash[:errors] = user.error.messages
         end 
 
         render json: user
@@ -39,5 +39,4 @@ class UsersController < ApplicationController
         params.require(:user).permit(:username, :password_digest, :email)
     end 
 
-    
 end
