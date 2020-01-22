@@ -8,9 +8,10 @@ class UsersController < ApplicationController
         
         if token_user_id == params[:id].to_i
            user = User.find(params[:id])
-           render json:user
+           render json: user
         else  
             render json: {errors: "you are not authorized"}, status: :unauthorized
+        end 
     end 
 
     def create
@@ -18,7 +19,8 @@ class UsersController < ApplicationController
         user=User.create(user_params)
        
         if user.valid?
-            render json: user
+           
+            render json: {token: make_token(user), user_id: user.id}
         else 
             render json:{errors: user.errors.full_messages}, status: :unprocessable_entity
         end 
