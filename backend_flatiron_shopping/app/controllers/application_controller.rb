@@ -4,7 +4,7 @@ class ApplicationController < ActionController::API
     end
     
     def hmac_secret
-        'secret'
+        ENV['TOKEN_SIGNING_SECRET']
     end
     
       def token_user_id
