@@ -5,8 +5,13 @@ class UsersController < ApplicationController
     end 
 
     def show
-        user = User.find(params[:id])
-        render json:user
+        
+        if token_user_id == params[:id].to_i
+           user = User.find(params[:id])
+           render json: user
+        else  
+            render json: {errors: "you are not authorized"}, status: :unauthorized
+        end 
     end 
 
     def create
@@ -14,7 +19,8 @@ class UsersController < ApplicationController
         user=User.create(user_params)
        
         if user.valid?
-            render json: user
+           
+            render json: {token: make_token(user), user_id: user.id}
         else 
             render json:{errors: user.errors.full_messages}, status: :unprocessable_entity
         end 
@@ -38,7 +44,7 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:username, :password_digest, :email)
+        params.permit(:username, :password, :email)
     end 
 
 end

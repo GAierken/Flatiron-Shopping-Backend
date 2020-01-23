@@ -1,15 +1,14 @@
 class ApplicationController < ActionController::API
     def make_token(user)
         JWT.encode({ user_id: user.id }, hmac_secret, 'HS256')
-      end
+    end
     
-      def hmac_secret
-        ENV["TOKEN_SIGNING_SECRET"]
+    def hmac_secret
+        ENV['TOKEN_SIGNING_SECRET']
     end
     
       def token_user_id
-        begin
-           
+        begin 
           token = request.headers["Authorization"]
           # decode the token
           dumb_array = JWT.decode(token, hmac_secret, true, { algorithm: 'HS256' })

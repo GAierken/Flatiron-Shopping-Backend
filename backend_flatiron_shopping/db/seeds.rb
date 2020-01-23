@@ -12,12 +12,12 @@ puts "Making new users"
 users=[{
     username: 'Gena',
     email: 'gena@126.com',
-    password_digest: '1234'
+    password: '1234'
 },
 {
     username: 'Carlie',
     email: 'carlie@126.com',
-    password_digest: '5678'
+    password: '5678'
 },
 ]
 
