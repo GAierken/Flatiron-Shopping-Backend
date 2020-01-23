@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     end 
 
     def show
-        
+       
         if token_user_id == params[:id].to_i
            user = User.find(params[:id])
            render json: user
@@ -35,11 +35,11 @@ class UsersController < ApplicationController
     #     render json: user
     # end 
 
-    def destroy
-        user=User.find(params[:id])
-        user.destroy
-        render json: user
-    end 
+    # def destroy
+    #     user=User.find(params[:id])
+    #     user.destroy
+    #     render json: user
+    # end 
 
     private
 
